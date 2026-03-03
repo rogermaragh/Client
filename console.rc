@@ -1,0 +1,307 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_COMPUTER            BITMAP                  "Computer.bmp"
+IDB_INTERFACE           BITMAP                  "Interface.bmp"
+IDB_INTERFACEHOT        BITMAP                  "Interface Hot.bmp"
+IDB_DEFAULT             BITMAP                  "DefaultI.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+END
+
+IDR_MENU_POPUPS MENU 
+BEGIN
+    POPUP "File Explorer"
+    BEGIN
+        MENUITEM "Refresh",                     ID_FILEEXPLORER_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "Delete...",                   ID_FILEEXPLORER_DELETE
+        MENUITEM "Execute",                     ID_FILEEXPLORER_EXECUTE
+        MENUITEM "Move...",                     ID_FILEEXPLORER_MOVE
+        MENUITEM "Copy...",                     ID_FILEEXPLORER_COPY
+        MENUITEM SEPARATOR
+        MENUITEM "Download...",                 ID_FILEEXPLORER_DOWNLOAD
+        MENUITEM "Upload...",                   ID_FILEEXPLORER_UPLOAD
+        MENUITEM "Compare...",                  ID_FILEEXPLORER_COMPARE
+        MENUITEM SEPARATOR
+        MENUITEM "New Folder...",               ID_FILEEXPLORER_NEWFOLDER
+    END
+    POPUP "Window Explorer"
+    BEGIN
+        MENUITEM "Refresh",                     ID_WINDOWEXPLORER_REFRESH
+        MENUITEM SEPARATOR
+        POPUP "Visibility"
+        BEGIN
+            MENUITEM "Show",                        ID_WINDOWEXPLORER_SHOW
+            MENUITEM "Hide",                        ID_WINDOWEXPLORER_HIDE
+            MENUITEM SEPARATOR
+            MENUITEM "Minimize",                    ID_WINDOWEXPLORER_MINIMIZE
+
+            MENUITEM "Maximize",                    ID_WINDOWEXPLORER_MAXIMIZE
+
+            MENUITEM "Restore",                     ID_WINDOWEXPLORER_RESTORE
+
+        END
+        MENUITEM "Enable",                      ID_WINDOWEXPLORER_ENABLE
+        MENUITEM "Disable",                     ID_WINDOWEXPLORER_DISABLE
+        MENUITEM SEPARATOR
+        MENUITEM "Set Caption...",              ID_WINDOWEXPLORER_SETCAPTION
+        MENUITEM "Bring to Front",              ID_WINDOWEXPLORER_BRINGTOFRONT
+
+        MENUITEM "Close",                       ID_WINDOWEXPLORER_CLOSE
+    END
+    POPUP "Registry Explorer"
+    BEGIN
+        MENUITEM "Refresh",                     ID_REGISTRYEXPLORER_REFRESH
+        POPUP "Root"
+        BEGIN
+            MENUITEM "HKEY_CLASSES_ROOT",           ID_ROOT_HKEY
+            MENUITEM "HKEY_CURRENT_USER",           ID_ROOT_HKEY40033
+            MENUITEM "HKEY_LOCAL_MACHINE",          ID_ROOT_HKEY40034
+            MENUITEM "HKEY_USERS",                  ID_ROOT_HKEY40035
+            MENUITEM "HKEY_CURRENT_CONFIG",         ID_ROOT_HKEY40036
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Set Value...",                ID_REGISTRYEXPLORER_SETVALUE
+        POPUP "Create"
+        BEGIN
+            MENUITEM "Sub Key",                     ID_CREATE_SUBKEY
+            MENUITEM "String Value",                ID_CREATE_STRINGVALUE
+            MENUITEM "Dword Value",                 ID_CREATE_DWORDVALUE
+            MENUITEM "Binary Value",                ID_CREATE_BINARYVALUE
+        END
+        MENUITEM "Delete",                      ID_REGISTRYEXPLORER_DELETE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_QUERY DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,5,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    EDITTEXT        IDC_QUERY_EDIT,15,52,155,15,ES_AUTOHSCROLL
+    LTEXT           "Destination:",IDC_QUERY_TEXT,15,23,110,15
+END
+
+IDD_PROG DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,7,52,172,
+                    19
+    LTEXT           "Static",IDC_LINE1,7,7,121,8
+    LTEXT           "Static",IDC_LINE2,7,15,121,8
+    LTEXT           "Static",IDC_LINE3,7,24,121,8
+    LTEXT           "Static",IDC_LINE4,7,32,121,8
+END
+
+IDD_MAIN DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDC_EXIT,129,69,50,14
+    CONTROL         "",IDC_FRAME,"Static",SS_BITMAP,160,66,15,13
+END
+
+IDD_VIDSTREAMDLG DIALOG  0, 0, 120, 109
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "VidStream Client"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CHECKBOX        "Connect...",IDC_CONNECT,4,88,52,16,BS_PUSHLIKE
+    CONTROL         "Overlay Connection Details",IDC_OVERLAY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,76,101,10
+    PUSHBUTTON      "Copy",IDC_COPY,64,88,52,16
+    CONTROL         "",IDC_FRAME,"Static",SS_BLACKFRAME | SS_SUNKEN,8,4,104,
+                    68
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DLG_QUERY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_PROG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_VIDSTREAMDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MERCURY             "Mercury"
+    IDS_MERCURY_O           "57,910,00 km (0.38 AU) (distance from the sun)"
+    IDS_MERCURY_D           "4,880 km"
+    IDS_MERCURY_M           "3.30e23 kg"
+    IDS_VENUS               "Venus"
+    IDS_VENUS_O             "108,200,000 km (0.72 AU) (distance from the sun)"
+    IDS_VENUS_D             "12,103.6 km"
+    IDS_VENUS_M             "4.869e24 kg"
+    IDS_EARTH               "Earth"
+    IDS_EARTH_O             "149,600,000 km (1.00 AU) (distance from the sun)"
+    IDS_EARTH_D             "12,756.3 km"
+    IDS_EARTH_M             "5.9736e24 kg"
+    IDS_MARS                "Mars"
+    IDS_MARS_O              "227,940,000 km (1.52 AU) (distance from the sun)"
+    IDS_MARS_D              "6,794 km"
+    IDS_MARS_M              "6.4219e23 kg"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PLUTO               "Pluto"
+    IDS_PLUTO_O             "5,913,520,000 km (39.5 AU) (distance from the sun)"
+    IDS_PLUTO_D             "2274 km"
+    IDS_PLUTO_M             "1.27e22 kg"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_JUPITER             "Jupiter"
+    IDS_JUPITER_O           "778,330,000 km (5.20 AU) (distance from the sun)"
+    IDS_JUPITER_D           "142,984 km"
+    IDS_JUPITER_M           "1.900e27 kg"
+    IDS_SATURN              "Saturn"
+    IDS_SATURN_O            "1,429,400,000 km (9.54 AU) (distance from the sun)"
+    IDS_SATURN_D            "120,536 km"
+    IDS_SATURN_M            "5.68e26 kg"
+    IDS_URANUS              "Uranus"
+    IDS_URANUS_O            "2,870,990,000 km (19.218 AU) (distance from the sun)"
+    IDS_URANUS_D            "51,118 km"
+    IDS_URANUS_M            "8.683e25 kg"
+    IDS_NEPTUNE             "Neptune"
+    IDS_NEPTUNE_O           "4,504,000,000 km (30.06 AU) (distance from the sun)"
+    IDS_NEPTUNE_D           "49,532 km"
+    IDS_NEPTUNE_M           "1.0247e26 kg"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
